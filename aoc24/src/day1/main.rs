@@ -37,7 +37,7 @@ pub fn main() -> Result<(), Error> {
     match import::import_file("day1/1-1.txt") {
         Ok(lines) => {
             for line in lines {
-                //Part1
+                // Part 1: Find the sum of the absolute differences between the left and right sides
                 let left_side_to_number = line.split(' ').next().unwrap().parse::<i32>().unwrap();
                 let right_side_to_number = line.split(' ').last().unwrap().parse::<i32>().unwrap();
 
@@ -50,9 +50,10 @@ pub fn main() -> Result<(), Error> {
                 let mut sum = 0;
                 for i in 0..unsorted_pairs.left.len() {
                     sum += (unsorted_pairs.left[i] - unsorted_pairs.right[i]).abs();
+                    println!("sum: {}", sum); // Solution: 19678534
                 }
 
-                //Part2
+                //Part 2: Find the similarity score between the left and right sides
                 let mut similarity_score = 0;
                 for i in 0..unsorted_pairs.left.len() {
                     let mut count = 0;
