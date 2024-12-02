@@ -3,7 +3,7 @@ mod day1;
 mod day2;
 
 fn main() {
-    let day = 1;
+    let day = 2;
 
     match day {
         1 => {
