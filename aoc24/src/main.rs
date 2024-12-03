@@ -1,9 +1,10 @@
 mod utils;
 mod day1;
 mod day2;
+mod day3;
 
 fn main() {
-    let day = 2;
+    let day = 3;
 
     match day {
         1 => {
@@ -15,6 +16,13 @@ fn main() {
         2 => {
             if let Err(e) = day2::main::main() {
                 eprintln!("Error executing Day 2: {}", e);
+            }
+
+        }
+
+        3 => {
+            if let Err(e) = day3::main::main() {
+                eprintln!("Error executing Day 3: {}", e);
             }
 
         }
