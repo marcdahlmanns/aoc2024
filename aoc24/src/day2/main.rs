@@ -18,8 +18,6 @@ pub fn main() -> Result<(), std::io::Error> {
     let part1 = false;
     let _part2 = true;
 
-
-
     let mut number_safe_vectors = 0;
     let mut number_unsafe_vectors = 0;
     if part1 {

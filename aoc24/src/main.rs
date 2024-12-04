@@ -2,9 +2,10 @@ mod utils;
 mod day1;
 mod day2;
 mod day3;
+mod day4;
 
 fn main() {
-    let day = 3;
+    let day = 4;
 
     match day {
         1 => {
@@ -27,6 +28,12 @@ fn main() {
 
         }
 
+        4 => {
+            if let Err(e) = day4::main::main() {
+                eprintln!("Error executing Day 4: {}", e);
+            }
+
+        }
         _ => println!("Day {} not yet implemented!", day),
     }
 }
