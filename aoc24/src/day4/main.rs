@@ -15,17 +15,14 @@ pub fn main() -> Result<(), std::io::Error> {
                 }
             }
             assert_eq!(grid.len(), 140 * 140);
-            let mut horizontal_count = 0;
-            horizontal_count = horizontal_check(&grid, dimensionality);
+            let horizontal_count = horizontal_check(&grid, dimensionality);
             xmas_count += horizontal_count;
 
 
-            let mut vertical_count = 0;
-            vertical_count = vertical_check(&grid, dimensionality);
+            let vertical_count = vertical_check(&grid, dimensionality);
             xmas_count += vertical_count;
 
-            let mut diagonal_count = 0;
-            diagonal_count = diagonal_check(&grid, dimensionality);
+            let diagonal_count = diagonal_check(&grid, dimensionality);
             xmas_count += diagonal_count;
             println!("The number of XMAS found is: {}", xmas_count); // Solution: 2297 (correct)
 
